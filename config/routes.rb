@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root :to => 'products#index'
-  resources :users
+
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  get '/logged_in', to: 'sessions#is_logged_in?'
+
+  resources :users, only: [:create, :show, :index]
   resources :products
   resources :orders
   resources :transactions

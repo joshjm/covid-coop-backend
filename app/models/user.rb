@@ -10,5 +10,5 @@ validates :email, uniqueness: true
 validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
 has_many :orders
-has_many :products, :optional => true
+has_many :products
 end

@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+u1 = User.create :username => "1111", :name => "Joshua", :email => 'josh@gmail.com', :password => 'chicken'
+u2 = User.create :username => "2222", :name => "Aleks", :email => 'aleks@ga.co', :password => 'chicken'
+u3 = User.create :username => "3333", :name => "John", :email => 'john@yahoo.com', :password => 'chicken'
+u4 = User.create :username => "4444", :name => "James", :email => 'james@ga.co', :password => 'chicken'
+u5 = User.create :username => "5555", :name => "Tracy", :email => 'tracygirl66@gmail.com', :password => 'chicken'
+u6 = User.create :username => "6666", :name => "Kate", :email => 'kate@microsoft.com', :password => 'chicken'
+puts "#{ User.count } users"
+
+
+Product.destroy_all
+p1 = Product.create :name => "Verkstan face shield", :category => "face shield", :quantity => 50
+p2 = Product.create :name => "Prusa face shield", :category => "face shield", :quantity => 30
+p3 = Product.create :name => "3D One face shield", :category => "face shield", :quantity => 25
+p4 = Product.create :name => "Ethanol 90%", :category => "sanitizer", :quantity => 100
+p5 = Product.create :name => "Hand sewn mask", :category => "mask", :quantity => 15
+p6 = Product.create :name => "10-ply toilet paper", :category => "essentials", :quantity => 9999
+puts "#{ Product.count } products"
+
+u1.products << p1 << p2 << p3
+u2.products << p4 << p5
+u3.products << p6
+
+
+
+

@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_07_12_002345) do
   end
 
   create_table "products", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.string "category"
     t.integer "quantity"
@@ -38,9 +39,9 @@ ActiveRecord::Schema.define(version: 2020_07_12_002345) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "username"
     t.string "name"
     t.string "email"
-    t.string "location"
     t.text "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

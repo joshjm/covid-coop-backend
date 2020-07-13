@@ -13,10 +13,6 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.find params[:id]
   end
 
-  def new
-    @transaction = Transaction.new
-  end
-
   def create
     @transaction = Transaction.new(transaction_params)
 

@@ -10,12 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_12_002623) do
+ActiveRecord::Schema.define(version: 2020_07_12_002345) do
 
   create_table "orders", force: :cascade do |t|
-    t.integer "hospital_id"
     t.boolean "is_request"
-    t.string "hospital_location"
     t.string "delivery_location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,13 +38,9 @@ ActiveRecord::Schema.define(version: 2020_07_12_002623) do
     t.string "name"
     t.string "email"
     t.string "location"
+    t.text "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "users_products", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "product_id"
   end
 
 end

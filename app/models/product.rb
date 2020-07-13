@@ -1,4 +1,4 @@
 class Product < ApplicationRecord
-  has_and_belongs_to_many :users_products
+  belongs_to :users, :optional => true
   has_many :transactions
 end

@@ -3,14 +3,17 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+    render :json => @orders
   end
 
   def show
     @order = Order.find params[:id]
+    render :json => @order
   end
 
   def edit
     @order = Order.find params[:id]
+    render :json => @order
   end
 
   def create
@@ -54,6 +57,6 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:hopsital_id, :is_request, :hospital_location, :delivery_location)
+      params.require(:order).permit(:is_request, :delivery_location)
     end
 end

@@ -3,14 +3,17 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    render :json => @products
   end
 
   def show
     @product = Product.find params[:id]
+    render :json => @product
   end
 
   def edit
     @product = Product.find params[:id]
+    render :json => @product
   end
 
   def create
@@ -54,6 +57,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:hopsital_id, :is_request, :hospital_location, :delivery_location)
+      params.require(:product).permit(:name, :category, :quantity)
     end
 end

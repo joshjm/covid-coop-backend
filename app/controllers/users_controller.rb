@@ -87,6 +87,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:username, :email, :password, :password_confirmation, :hopsital_id, :is_request, :hospital_location, :delivery_location)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :location) # To be fixed to match User model
     end
 end

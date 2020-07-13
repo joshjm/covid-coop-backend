@@ -3,14 +3,17 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = Transaction.all
+    render :json => @transactions
   end
 
   def show
     @transaction = Transaction.find params[:id]
+    render :json => @transaction
   end
 
   def edit
     @transaction = Transaction.find params[:id]
+    render :json => @transaction
   end
 
   def create
@@ -54,6 +57,6 @@ class TransactionsController < ApplicationController
     end
 
     def transaction_params
-      params.require(:transaction).permit(:hopsital_id, :is_request, :hospital_location, :delivery_location)
+      params.require(:transaction).permit(:quantity, :price)
     end
 end

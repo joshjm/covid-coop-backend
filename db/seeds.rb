@@ -25,10 +25,19 @@ p5 = Product.create :name => "Hand sewn mask", :category => "mask", :quantity =>
 p6 = Product.create :name => "10-ply toilet paper", :category => "essentials", :quantity => 9999
 puts "#{ Product.count } products"
 
+Order.destroy_all
+o1 = Order.create :is_request => 'TRUE', :delivery_location => '1 Edward Street, Brisbane QLD 4000'
+o2 = Order.create :is_request => 'FALSE', :delivery_location => '499 Parramatta Road, Leichhardt NSW 2040'
+o3 = Order.create :is_request => 'TRUE', :delivery_location => '21 Aubin Street, Neutral Bay NSW 2089'
+o4 = Order.create :is_request => 'FALSE', :delivery_location => '42  Freda Street, Upper Mount Gravatt QLD 4122'
+o5 = Order.create :is_request => 'TRUE', :delivery_location => '30 Mascar Street, Upper Mount Gravatt QLD 4112'
+puts "#{ Order.count } orders"
+
+Transaction.destroy_all
+t1 = Transaction.create :item => 'Surgical mask', :quantity => 450, :price => '1350'
+t2 = Transaction.create :item => 'Aussan L44 Concentrate', :quantity => 10, :price => '45'
+t3 = Transaction.create :item => 'Purell Instant Hand Sanitiser - 240ml Pump Bottle', :quantity => 20, :price => '100'
+
 u1.products << p1 << p2 << p3
 u2.products << p4 << p5
 u3.products << p6
-
-
-
-

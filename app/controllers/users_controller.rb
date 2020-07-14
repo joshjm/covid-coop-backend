@@ -48,16 +48,6 @@ class UsersController < ApplicationController
         errors: @user.errors.full_messages
       }
     end
-
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'user was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   def update
@@ -87,6 +77,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :location) # To be fixed to match User model
+      params.permit(:email, :password, :password_confirmation, :location) # To be fixed to match User model
     end
 end

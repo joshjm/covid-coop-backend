@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_07_14_033522) do
     t.integer "quantity"
     t.string "image_url"
     t.text "description"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_07_14_033522) do
     t.string "name"
     t.string "email"
     t.text "password_digest"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false

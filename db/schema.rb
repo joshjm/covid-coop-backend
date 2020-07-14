@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_12_002345) do
+ActiveRecord::Schema.define(version: 2020_07_14_033522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "orders", force: :cascade do |t|
-    t.boolean "is_request"
+    t.integer "user_id"
     t.string "delivery_location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,11 +27,15 @@ ActiveRecord::Schema.define(version: 2020_07_12_002345) do
     t.string "name"
     t.string "category"
     t.integer "quantity"
+    t.string "image_url"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "transactions", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
     t.integer "quantity"
     t.float "price"
     t.datetime "created_at", null: false
@@ -39,12 +43,12 @@ ActiveRecord::Schema.define(version: 2020_07_12_002345) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
     t.string "name"
     t.string "email"
     t.text "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
   end
 
 end

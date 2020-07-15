@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates :email, presence: true
+  validates :email, :location, presence: true
   validates :email, uniqueness: true
 
   # prevents people circumventing the input type validation

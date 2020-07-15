@@ -16,13 +16,14 @@ ActiveRecord::Schema.define(version: 2020_07_14_033522) do
   enable_extension "plpgsql"
 
   create_table "orders", force: :cascade do |t|
-    t.boolean "is_request"
+    t.integer "user_id"
     t.string "delivery_location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.string "category"
     t.integer "quantity"
@@ -34,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_07_14_033522) do
   end
 
   create_table "transactions", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
     t.integer "quantity"
     t.float "price"
     t.datetime "created_at", null: false
@@ -43,7 +46,6 @@ ActiveRecord::Schema.define(version: 2020_07_14_033522) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "location"
     t.text "password_digest"
     t.string "location"
     t.datetime "created_at", null: false

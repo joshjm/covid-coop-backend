@@ -90,26 +90,26 @@ u7.products << p15 << p18
 u8.products << p17
 u9.products << p16 << p20 << p21
 
-p1.transactions << t1
-p2.transactions << t2
-p3.transactions << t3
-p4.transactions << t4
-p5.transactions << t5
-p6.transactions << t6
-p7.transactions << t7
-p8.transactions << t8
-p9.transactions << t9
-p10.transactions << t10
-p11.transactions << t11
-p12.transactions << t12
-p13.transactions << t13
-p14.transactions << t14
-p15.transactions << t15
+p1.transactions << t1 << t3
+p2.transactions << t2 << t9 << t11
+p3.transactions << t3 << t4
+p4.transactions << t4 << t19
+p5.transactions << t5 << t20
+p6.transactions << t6 << t11
+p7.transactions << t7 << t19 << t21
+p8.transactions << t8 << t10
+p9.transactions << t9 << t20
+p10.transactions << t10 << t12
+p11.transactions << t11 << t13
+p12.transactions << t12 << t20 << t21
+p13.transactions << t13 << t19
+p14.transactions << t14 << t16
+p15.transactions << t15 << t21
 p16.transactions << t16
-p17.transactions << t17
-p18.transactions << t18
+p17.transactions << t17 << t19
+p18.transactions << t18 << t19
 p19.transactions << t19
-p20.transactions << t20
+p20.transactions << t20 << t21
 p21.transactions << t21
 
 o1.transactions << t1 << t2

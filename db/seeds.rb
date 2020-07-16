@@ -78,6 +78,44 @@ t18 = Transaction.create :quantity => 23, :price => 6
 t19 = Transaction.create :quantity => 4, :price => 8
 t20 = Transaction.create :quantity => 5, :price => 9.2
 t21 = Transaction.create :quantity => 234, :price => 5
+t22 = Transaction.create :quantity => 194, :price => 11
+t23 = Transaction.create :quantity => 34, :price => 2
+t24 = Transaction.create :quantity => 145, :price => 13
+t25 = Transaction.create :quantity => 166, :price => 7
+t26 = Transaction.create :quantity => 107, :price => 3
+t27 = Transaction.create :quantity => 65, :price => 12
+t28 = Transaction.create :quantity => 111, :price => 21
+t29 = Transaction.create :quantity => 94, :price => 21
+t30 = Transaction.create :quantity => 190, :price => 17
+t31 = Transaction.create :quantity => 55, :price => 12
+t32 = Transaction.create :quantity => 189, :price => 18
+t33 = Transaction.create :quantity => 48, :price => 15
+t34 = Transaction.create :quantity => 80, :price => 27
+t35 = Transaction.create :quantity => 194, :price => 4
+t36 = Transaction.create :quantity => 70, :price => 19
+t37 = Transaction.create :quantity => 64, :price => 8
+t38 = Transaction.create :quantity => 118, :price => 10
+t39 = Transaction.create :quantity => 48, :price => 28
+t40 = Transaction.create :quantity => 193, :price => 27
+t41 = Transaction.create :quantity => 132, :price => 9
+t42 = Transaction.create :quantity => 99, :price => 10
+t43 = Transaction.create :quantity => 91, :price => 6
+t44 = Transaction.create :quantity => 173, :price => 10
+t45 = Transaction.create :quantity => 199, :price => 17
+t46 = Transaction.create :quantity => 185, :price => 29
+t47 = Transaction.create :quantity => 83, :price => 13
+t48 = Transaction.create :quantity => 193, :price => 10
+t49 = Transaction.create :quantity => 155, :price => 23
+t50 = Transaction.create :quantity => 77, :price => 9
+t51 = Transaction.create :quantity => 132, :price => 10
+t52 = Transaction.create :quantity => 98, :price => 22
+t53 = Transaction.create :quantity => 56, :price => 20
+t54 = Transaction.create :quantity => 130, :price => 24
+t55 = Transaction.create :quantity => 73, :price => 13
+t56 = Transaction.create :quantity => 155, :price => 28
+t57 = Transaction.create :quantity => 81, :price => 26
+t58 = Transaction.create :quantity => 96, :price => 18
+t59 = Transaction.create :quantity => 199, :price => 9
 puts "#{ Transaction.count } transactions"
 
 u1.products << p1 << p2 << p10
@@ -90,26 +128,26 @@ u7.products << p15 << p18
 u8.products << p17
 u9.products << p16 << p20 << p21
 
-p1.transactions << t1 << t3
-p2.transactions << t2 << t9 << t11
-p3.transactions << t3 << t4
-p4.transactions << t4 << t19
-p5.transactions << t5 << t20
-p6.transactions << t6 << t11
-p7.transactions << t7 << t19 << t21
-p8.transactions << t8 << t10
-p9.transactions << t9 << t20
-p10.transactions << t10 << t12
-p11.transactions << t11 << t13
-p12.transactions << t12 << t20 << t21
-p13.transactions << t13 << t19
-p14.transactions << t14 << t16
-p15.transactions << t15 << t21
-p16.transactions << t16
-p17.transactions << t17 << t19
-p18.transactions << t18 << t19
-p19.transactions << t19
-p20.transactions << t20 << t21
+p1.transactions << t1 << t22 << t53
+p2.transactions << t2 << t23 << t25 << t43 << t48
+p3.transactions << t3 << t24
+p4.transactions << t4 << t26 << t49 << t56
+p5.transactions << t5 << t30 << t54
+p6.transactions << t6 << t28
+p7.transactions << t7 << t27 << t29
+p8.transactions << t8 << t33 << t58 << t59
+p9.transactions << t9 << t31
+p10.transactions << t10 << t32 << t51
+p11.transactions << t11 << t34
+p12.transactions << t12 << t36 << t38 << t50
+p13.transactions << t13 << t37
+p14.transactions << t14 << t35 << t44
+p15.transactions << t15 << t41
+p16.transactions << t16 << t55
+p17.transactions << t17 << t39 << t57
+p18.transactions << t18 << t40 << t47 << t52
+p19.transactions << t19 << t45
+p20.transactions << t20 << t42 << t46
 p21.transactions << t21
 
 o1.transactions << t1 << t2

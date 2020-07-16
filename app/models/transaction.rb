@@ -1,4 +1,4 @@
 class Transaction < ApplicationRecord
-  belongs_to :orders, optional: true
-  belongs_to :products, optional: true
+  belongs_to :order, optional: true
+  belongs_to :product, optional: true
 end

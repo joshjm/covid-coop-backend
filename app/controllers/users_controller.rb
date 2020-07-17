@@ -77,6 +77,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.permit(:email, :password, :password_confirmation, :location) # To be fixed to match User model
+      params.permit(:email, :password, :password_confirmation, :location, :lat, :lng) # To be fixed to match User model
     end
 end
